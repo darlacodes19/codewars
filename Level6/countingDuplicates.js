@@ -16,17 +16,19 @@
 //if the previos and current match than increse count - only works if they are next to eachother 
 
 function duplicateCount(text){
-    
+    //create an array of letters all lowercased 
     let arr = text.toLowerCase().split('')
-
+    //create an empty object
     const count = {};
-
+    //fill in the object by looping through each element in the array,
+    //each letter becomes a key, if the key doesn't exists it sets the value to zero
+    //if the letter does exists in the object, it increases the value by 1
     arr.forEach(element => {
       count[element] = (count[element] || 0) + 1;
     });
-    
+    //turn object into array to filter
     countArray = Object.entries(count)
-    
+    //filter array and return length 
     return countArray.filter(([key, value]) =>  value >= 2 ).length
 
    
