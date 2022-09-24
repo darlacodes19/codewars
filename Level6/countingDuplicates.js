@@ -42,4 +42,17 @@ function duplicateCount(text){
    
   
 
-  console.log(duplicateCount('aA11'))
+//   console.log(duplicateCount('aA11'))
+
+
+
+  function duplicateCount2(text){
+    return text.toLowerCase().split('')
+    .filter(function(val, i, arr){
+      return arr.indexOf(val) !== i && arr.lastIndexOf(val) === i;
+    });
+  }
+
+
+
+  console.log(duplicateCount2("aabbcde"))
