@@ -24,12 +24,19 @@ function unique_in_order (iterable) {
     return finalResult
 }
 
-console.log(unique_in_order('AAAABBBCCDAABBB'))
+// console.log(unique_in_order('AAAABBBCCDAABBB'))
 
+//Try and solve with the filter method
 
 function unique_in_order2 (iterable) {
 
     
+    
+
+    return [...iterable].filter( (element, index) => element !== iterable[index+1])
+
+    //why use the spread operator? 
+        //its going to spread the string each letter into an array 
 }
 
-console.log(unique_in_order2('AAAABBBCCDAABBB'))
+console.log(unique_in_order2([1,2,3]))
