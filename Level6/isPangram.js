@@ -5,7 +5,9 @@
 // P 
     //remove all spaces from the string
     //lowercase all letters
-    //
+    //remove duplicates
+    //alphabetical order
+    //compare 
 
 
 
@@ -15,20 +17,37 @@
 
 function isPangram (string) {
 
-    let newString =  string.replace(/\s/g, '')
 
-    let lhs = new Set ();
 
-    for ( let i=0; i<newString.length; i++) {
-        lhs.add(newString[i])
-    }
 
-    return lhs
 
-    // for(let ch of lhs) {
-    //     console.log(ch)
-    // }
+    let oderedString =  string
+    .replace(/[^a-z]/gi, '')
+    .toLowerCase().split('')
+    .filter(function(value,index,self) {
+        return self.indexOf(value) === index
+    })
+    .sort()
+    .join('')
+
+
+
+   return oderedString === 'abcdefghijklmnopqrstuvwxyz'
+
+
 
 }
 
-console.log(isPangram("The quick brown fox jumps over the lazy dog"))
+// console.log(isPangram("ABCD45EFGH,IJK,LMNOPQR56STUVW3XYZ"))
+
+function isPangram2(string){
+
+    return 'abcdefghijklmnopqrstuvwxyz'
+    //turn the string into an array of letters 
+      .split('')
+    //check if the string given includes every letter 
+        .every((x) => string.toLowerCase().includes(x));
+  }
+
+
+  console.log(isPangram2("ABCD45EFGH,IJK,LMNOPQR56STUVW3XYZ"))
