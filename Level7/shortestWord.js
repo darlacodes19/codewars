@@ -26,4 +26,14 @@ for (let i =0; i<arrayOfWords.length; i++) {
 return lenghtOfString
 }
 
-console.log(findShort('Hello my name'))
+// console.log(findShort('Hello my name'))
+
+function findShort2(string){
+
+    const arrayOflengths =  string.split(' ').map(word => word.length)
+
+    return Math.min(...arrayOflengths)
+    
+}
+    
+    console.log(findShort2('Hello my name'))
