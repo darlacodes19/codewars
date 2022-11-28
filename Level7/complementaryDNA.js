@@ -12,27 +12,39 @@
 
 function DNAStrand(dna){
 
+    //using an object 
+    const pairs = {
+        A : "T",
+        T : "A",
+        C : "G",
+        G : "C"
+    }
+
+    return dna.replace(/./g, function (letter) {
+            return pairs[letter]
+    })
+
     //A 
     //T
     //C
     //G
 
-    let complementaryString = ""
+    // let complementaryString = ""
     
-    for ( let i= 0 ; i< dna.length; i++) {
+    // for ( let i= 0 ; i< dna.length; i++) {
 
-        if (dna[i] === 'A')  {
-            complementaryString += "T"
-        } else if (dna[i] === "T") {
-            complementaryString += "A"
-        }else if (dna[i] === "C") {
-            complementaryString += "G"
-        } else {
-            complementaryString += "C"
-        }
-    }
+    //     if (dna[i] === 'A')  {
+    //         complementaryString += "T"
+    //     } else if (dna[i] === "T") {
+    //         complementaryString += "A"
+    //     }else if (dna[i] === "C") {
+    //         complementaryString += "G"
+    //     } else {
+    //         complementaryString += "C"
+    //     }
+    // }
 
-    return complementaryString
+    // return complementaryString
     
   }
 
