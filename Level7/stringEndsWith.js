@@ -14,11 +14,13 @@
 function solution(str, ending){
 
     
-   const stringEnding = ending.length
+//    const stringEnding = ending.length
 
-   if (ending == "") return true
+//    if (ending == "") return true
 
-   return str.slice(-stringEnding) === ending
+//    return str.slice(-stringEnding) === ending
+
+return str.endsWith(ending)
 
 
   }
