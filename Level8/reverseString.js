@@ -10,13 +10,12 @@
 
 function solution(str){
 
-    let reversedString= ""
+    
 
-    for (let i=str.length-1; i<str.length; i--){
-        reversedString+=i
-    }
+  return str.split("").reverse().join("")
 
-    return reversedString
+   
+    
   
 }
 
