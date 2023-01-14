@@ -7,6 +7,9 @@
     //loop through string starting at the end 
     //add it to another variable
 
+    //more helpful solutions
+
+   // https://www.freecodecamp.org/news/how-to-reverse-a-string-in-javascript-in-3-different-ways-75e4763c68cb/
 
 function solution(str){
 
