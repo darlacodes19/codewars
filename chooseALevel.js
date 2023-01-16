@@ -5,4 +5,9 @@ function randomizer () {
     return Math.floor(Math.random()*(8-5+1)+5)
 }
 
+randomizer()
+
+
+console.log(randomizer())
+
 
