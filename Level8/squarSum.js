@@ -12,14 +12,18 @@
 
 function squareSum(numbers){
 
-    if (numbers.length == 0) return 0
+    return numbers.reduce((acc ,number ) =>  {
+        return (number * number) + acc
+    },0);
 
-   return numbers.map(number => {
-        return number**2
-    })
-    .reduce((pre , curr ) =>  {
-        return pre + curr
-    });
+//     if (numbers.length == 0) return 0
+
+//    return numbers.map(number => {
+//         return number**2
+//     })
+//     .reduce((pre , curr ) =>  {
+//         return pre + curr
+//     });
 
 
 }
