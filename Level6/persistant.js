@@ -47,4 +47,25 @@ function persistence(num  , counter = 0) {
 }
 
 
-console.log(persistence(39))
+// console.log(persistence(39))
+
+
+
+//Solve with while loop
+
+function persistence2(num) {
+
+    let counter = 0;
+
+    while (num > 9) {
+        counter++
+       num = String(num).split('').reduce((a , b) => a * b)
+
+    }
+
+    return counter
+}
+
+
+
+console.log(persistence2(999))
