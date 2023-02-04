@@ -10,16 +10,21 @@
 function persistence(num  , counter = 0) {
 
 
-    
+   //1- Establish a base case or a stoping condition
+        // if and once the number is a single digit return count
+         
 
     if(num < 10) {
         return counter;
     } else {
-        
+        // create a variable that holds that array with each number as an item  by first turning the number into a string and then using Array.from to turn the string into an array
+        //you could also use split to turn string into an array 
         let arrayOfNumbers = Array.from(String(num), Number) 
+        //reducer function reduces numbers in array to a single digit 
         let reducedNumber = arrayOfNumbers.reduce( (preValue , currValue) =>  {
         return preValue * currValue
         } )
+        //return the function (recursion) with a smaller input and increase counter
 
          return persistence(reducedNumber , counter+=1)
         
