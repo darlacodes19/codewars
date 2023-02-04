@@ -9,11 +9,8 @@
 //use recursion
 function persistence(num  , counter = 0) {
 
-
    //1- Establish a base case or a stoping condition
         // if and once the number is a single digit return count
-         
-
     if(num < 10) {
         return counter;
     } else {
@@ -21,15 +18,10 @@ function persistence(num  , counter = 0) {
         //you could also use split to turn string into an array 
         let arrayOfNumbers = Array.from(String(num), Number) 
         //reducer function reduces numbers in array to a single digit 
-        let reducedNumber = arrayOfNumbers.reduce( (preValue , currValue) =>  {
-        return preValue * currValue
-        } )
-        //return the function (recursion) with a smaller input and increase counter
-
+        let reducedNumber = arrayOfNumbers.reduce( (a , b) =>  a * b)
+    //2-return the function (recursion) with a smaller input and increase counter
          return persistence(reducedNumber , counter+=1)
-        
-          
-       
+           
     }
     
     
