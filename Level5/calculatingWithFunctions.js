@@ -10,9 +10,38 @@
 //eight(dividedBy(three()));
 
 
+//operands might get one or two arguments
+//operator will always get one argument, an operand ( a number) 
+
 function zero() {}
-function one() {}
-function two() {}
+function one() {
+
+
+    if(arguments.length == 0 ) {
+        return 1
+    } else {
+        if(arguments[0] === "+") {
+            return 1 + arguments[1]
+        }
+    }
+    //if no arguments 
+    //return the number
+    //if 2 arguments 
+        //do , number , operator, and second number 
+
+        //how do you access arguments in JS 
+            //with the arguments object. Each non-arrow function has access to the arguments object, an array like object. 
+}
+function two() {
+    if(arguments.length == 0 ) {
+        return 2
+    } else {
+        if(arguments[0] === "+") {
+            return 2 + arguments[1]
+            
+        }
+    }
+}
 function three() {}
 function four() {}
 function five() {}
@@ -21,7 +50,12 @@ function seven() {}
 function eight() {}
 function nine() {}
 
-function plus() {}
+function plus() {
+    return  `+ ${arguments[0]}`
+}
 function minus() {}
 function times() {}
 function dividedBy() {}
+
+
+console.log(one(plus(two())))
